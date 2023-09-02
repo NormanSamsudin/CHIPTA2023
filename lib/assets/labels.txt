@@ -1,0 +1,12 @@
+Corn Common Rust
+Corn Northern Leaf Blight
+Rice Leaf Blast
+Rice Brown Spot
+Chili Leaf Curl
+Chili Leaf Spot
+Chili Whitefly
+Tomato Septoria Leaf Spot
+Tomato Yellow Leaf Curl Virus
+Tomato Early Blight
+Green Leafhopper
+Brown Planthopper
