@@ -23,7 +23,9 @@ class NeemDetailsPage extends StatefulWidget {
 
 class _NeemDetailsPageState extends State<NeemDetailsPage> {
   void _launchURL() async {
-    const url = 'https://shorturl.at/eFWYZ'; // Replace with your desired URL
+    // const url = 'https://shorturl.at/eFWYZ'; // Replace with your desired URL
+    const url =
+        'https://shopee.com.my/Pherotools-NEEM-OIL-100-(250ml-1L)-(Pure-Cold-Pressed-Neem-Oil)-(300ppm)-Minyak-Neem-Garden-Organic-Pest-Control-i.49204412.22804241782?sp_atk=8f7caf61-46f8-4b7a-abde-ea5e793648e4&xptdk=8f7caf61-46f8-4b7a-abde-ea5e793648e4'; // Replace with your desired URL
     if (await canLaunch(url)) {
       await launch(url);
     } else {
@@ -47,7 +49,9 @@ class _NeemDetailsPageState extends State<NeemDetailsPage> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                SizedBox(height: 30,),
+                SizedBox(
+                  height: 30,
+                ),
                 Stack(
                   children: [
                     Container(
@@ -60,8 +64,6 @@ class _NeemDetailsPageState extends State<NeemDetailsPage> {
                         ),
                       ),
                     ),
-
-
                     Center(
                       child: Image.asset(
                         "lib/assets/images/neem.jpg",
@@ -77,15 +79,13 @@ class _NeemDetailsPageState extends State<NeemDetailsPage> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'Pherotools NEEM OIL (pure 300ppm / high strength 2,200ppm)'
-                            ' Garden Organic Pest Control Fortineem Fungus Insect Repellent',
+                        'Pherotools NEEM OIL 100% (250ml / 1L) (Pure Cold Pressed Neem Oil) (300ppm) Minyak Neem Garden Organic Pest Control',
                         style: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
                       SizedBox(height: 15),
-
                       Text(
                         'RM58.00',
                         style: TextStyle(
@@ -94,22 +94,30 @@ class _NeemDetailsPageState extends State<NeemDetailsPage> {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-
-                      SizedBox(height: 10,),
-
-                      Divider(thickness: 5,),
-                      SizedBox(height: 5,),
-
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Divider(
+                        thickness: 5,
+                      ),
+                      SizedBox(
+                        height: 5,
+                      ),
                       Row(
                         children: [
-                          Text("Type:  ", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),),
+                          Text(
+                            "Type:  ",
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 18),
+                          ),
                           ElevatedButton(
-                            onPressed: (){},
+                            onPressed: () {},
                             style: ElevatedButton.styleFrom(
-                              fixedSize: Size(105, 20.0), // Adjust the width and height as needed
-                              primary: Colors.grey,
+                              fixedSize: Size(120, 20.0),
+                              backgroundColor: Colors.grey,
                               shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(10), // To make it rounded
+                                borderRadius: BorderRadius.circular(
+                                    10), // To make it rounded
                               ),
                             ),
                             child: Text("Pesticides"),
@@ -118,7 +126,7 @@ class _NeemDetailsPageState extends State<NeemDetailsPage> {
                       ),
                       Text(
                         'Effective against (insects, mites, nematodes) and fungal pathogens, serving as '
-                            'a sustainable botanical pesticide for crop pest control. ',
+                        'a sustainable botanical pesticide for crop pest control. ',
                         textAlign: TextAlign.justify,
                         style: TextStyle(
                           fontSize: 16,
@@ -127,7 +135,9 @@ class _NeemDetailsPageState extends State<NeemDetailsPage> {
                         ),
                       ),
                       SizedBox(height: 15),
-                      Divider(thickness: 5,),
+                      Divider(
+                        thickness: 5,
+                      ),
                       Text(
                         'Product Description:',
                         style: TextStyle(
@@ -135,7 +145,9 @@ class _NeemDetailsPageState extends State<NeemDetailsPage> {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      SizedBox(height: 10,),
+                      SizedBox(
+                        height: 10,
+                      ),
                       Text(
                         'Direction to use: ',
                         style: TextStyle(
@@ -143,7 +155,9 @@ class _NeemDetailsPageState extends State<NeemDetailsPage> {
                           fontSize: 16,
                         ),
                       ),
-                      SizedBox(height: 10,),
+                      SizedBox(
+                        height: 10,
+                      ),
                       Text(
                         '1. Spray on the leaves.',
                         textAlign: TextAlign.justify,
@@ -152,19 +166,23 @@ class _NeemDetailsPageState extends State<NeemDetailsPage> {
                           fontSize: 16,
                         ),
                       ),
-                      SizedBox(height: 10,),
+                      SizedBox(
+                        height: 10,
+                      ),
                       Text(
                         '2. Use 3-5ml of neem oil for every 1 litter of water. It is better to fill the spray '
-                            'container with water first before adding neem oil into solution. spray on the surface and '
-                            'under the leaves. Repeat spray for 5 to 7 days and respray the plant if it rain 3 hours '
-                            'after spray the plant. It is encourages to spray at morning and evening. ',
+                        'container with water first before adding neem oil into solution. spray on the surface and '
+                        'under the leaves. Repeat spray for 5 to 7 days and respray the plant if it rain 3 hours '
+                        'after spray the plant. It is encourages to spray at morning and evening. ',
                         textAlign: TextAlign.justify,
                         style: TextStyle(
                           fontWeight: FontWeight.w300,
                           fontSize: 16,
                         ),
                       ),
-                      SizedBox(height: 10,),
+                      SizedBox(
+                        height: 10,
+                      ),
                     ],
                   ),
                 ),
@@ -196,12 +214,12 @@ class _NeemDetailsPageState extends State<NeemDetailsPage> {
         color: Colors.transparent,
         elevation: 0,
         child: Container(
-          margin: EdgeInsets.all(16),
+          //margin: EdgeInsets.all(16),
           child: ElevatedButton(
             onPressed: _launchURL,
             style: ElevatedButton.styleFrom(
-              fixedSize: Size(200, 55.0), // Adjust the width and height as needed
-              primary: Color.fromRGBO(77, 139, 49, 1),
+              fixedSize: Size(200, 55.0),
+              backgroundColor: Color.fromRGBO(77, 139, 49, 1),
               padding: EdgeInsets.symmetric(vertical: 16),
               textStyle: TextStyle(fontSize: 18),
               shape: RoundedRectangleBorder(
@@ -210,11 +228,11 @@ class _NeemDetailsPageState extends State<NeemDetailsPage> {
             ),
             child: Row(
               children: [
-                Spacer(flex: 1,),
-                ImageIcon(AssetImage("lib/assets/images/shopping-cart.png")),
-                SizedBox(width: 10,),
-                Text('Buy Now'),
-                Spacer(flex: 1,),
+                Spacer(),
+                Icon(Icons.shopping_cart, color: Colors.white),
+                SizedBox(width: 10),
+                Text('Buy Now', style: TextStyle(color: Colors.white)),
+                Spacer(),
               ],
             ),
           ),

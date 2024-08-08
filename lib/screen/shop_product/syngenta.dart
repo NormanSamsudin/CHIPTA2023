@@ -23,7 +23,9 @@ class SyngentaDetailsPage extends StatefulWidget {
 
 class _SyngentaDetailsPageState extends State<SyngentaDetailsPage> {
   void _launchURL() async {
-    const url = 'https://shorturl.at/akLMT'; // Replace with your desired URL
+    // const url = 'https://shorturl.at/akLMT'; // Replace with your desired URL
+    const url =
+        'https://shopee.com.my/500ml-Racun-Amistartop-Racun-Kulat-Keluaran-Syngenta-Mengawal-Semua-Jenis-Penyakit-Tanaman-i.250624538.20146646300?sp_atk=7541a370-45bf-4087-a477-016e473bee01&xptdk=7541a370-45bf-4087-a477-016e473bee01'; // Replace with your desired URL
     if (await canLaunch(url)) {
       await launch(url);
     } else {
@@ -47,7 +49,9 @@ class _SyngentaDetailsPageState extends State<SyngentaDetailsPage> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                SizedBox(height: 30,),
+                SizedBox(
+                  height: 30,
+                ),
                 Stack(
                   children: [
                     Container(
@@ -60,8 +64,6 @@ class _SyngentaDetailsPageState extends State<SyngentaDetailsPage> {
                         ),
                       ),
                     ),
-
-
                     Center(
                       child: Image.asset(
                         "lib/assets/images/syngenta.jpg",
@@ -77,8 +79,8 @@ class _SyngentaDetailsPageState extends State<SyngentaDetailsPage> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'Syngenta Amistartop® 500ml / Azoxystrobin 18.0% + Difeconazole 11.3% / '
-                            'Bintik Karat / Antraknos / Downy / 100% Original',
+                        'Syngenta Amistartop/ 500ml / Mengawal'
+                        ' Semua Jenis Penyakit Tanaman',
                         style: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
@@ -87,7 +89,7 @@ class _SyngentaDetailsPageState extends State<SyngentaDetailsPage> {
                       SizedBox(height: 15),
 
                       Text(
-                        'RM138.90',
+                        'RM135.00',
                         style: TextStyle(
                           fontSize: 20,
                           color: Colors.deepOrangeAccent,
@@ -95,21 +97,32 @@ class _SyngentaDetailsPageState extends State<SyngentaDetailsPage> {
                         ),
                       ),
 
-                      SizedBox(height: 10,),
+                      SizedBox(
+                        height: 10,
+                      ),
 
-                      Divider(thickness: 5,),
-                      SizedBox(height: 5,),
+                      Divider(
+                        thickness: 5,
+                      ),
+                      SizedBox(
+                        height: 5,
+                      ),
 
                       Row(
                         children: [
-                          Text("Type:  ", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),),
+                          Text(
+                            "Type:  ",
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 18),
+                          ),
                           ElevatedButton(
-                            onPressed: (){},
+                            onPressed: () {},
                             style: ElevatedButton.styleFrom(
-                              fixedSize: Size(105, 20.0), // Adjust the width and height as needed
-                              primary: Colors.grey,
+                              fixedSize: Size(120, 20.0),
+                              backgroundColor: Colors.grey,
                               shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(10), // To make it rounded
+                                borderRadius: BorderRadius.circular(
+                                    10), // To make it rounded
                               ),
                             ),
                             child: Text("Fungicides"),
@@ -126,7 +139,9 @@ class _SyngentaDetailsPageState extends State<SyngentaDetailsPage> {
                       //   ),
                       // ),
                       SizedBox(height: 10),
-                      Divider(thickness: 5,),
+                      Divider(
+                        thickness: 5,
+                      ),
                       Text(
                         'Product Description:',
                         style: TextStyle(
@@ -134,7 +149,9 @@ class _SyngentaDetailsPageState extends State<SyngentaDetailsPage> {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      SizedBox(height: 10,),
+                      SizedBox(
+                        height: 10,
+                      ),
                       Text(
                         'Direction to use: ',
                         style: TextStyle(
@@ -142,17 +159,21 @@ class _SyngentaDetailsPageState extends State<SyngentaDetailsPage> {
                           fontSize: 16,
                         ),
                       ),
-                      SizedBox(height: 10,),
+                      SizedBox(
+                        height: 10,
+                      ),
                       Text(
                         '1. Paddy: 50 to 60 dyas after planting paddy. If needed '
-                            'repeat for every 14days if the disease still on the plant.',
+                        'repeat for every 14days if the disease still on the plant.',
                         textAlign: TextAlign.justify,
                         style: TextStyle(
                           fontWeight: FontWeight.w300,
                           fontSize: 16,
                         ),
                       ),
-                      SizedBox(height: 10,),
+                      SizedBox(
+                        height: 10,
+                      ),
                       Text(
                         '2. Spinach: 3 times for every season',
                         textAlign: TextAlign.justify,
@@ -161,7 +182,9 @@ class _SyngentaDetailsPageState extends State<SyngentaDetailsPage> {
                           fontSize: 16,
                         ),
                       ),
-                      SizedBox(height: 10,),
+                      SizedBox(
+                        height: 10,
+                      ),
                       Text(
                         '3. Coconut palm & mango: 4 times for every season ',
                         textAlign: TextAlign.justify,
@@ -170,7 +193,9 @@ class _SyngentaDetailsPageState extends State<SyngentaDetailsPage> {
                           fontSize: 16,
                         ),
                       ),
-                      SizedBox(height: 10,),
+                      SizedBox(
+                        height: 10,
+                      ),
                       Text(
                         '4. Cucumber: 5 times for every season ',
                         textAlign: TextAlign.justify,
@@ -179,7 +204,9 @@ class _SyngentaDetailsPageState extends State<SyngentaDetailsPage> {
                           fontSize: 16,
                         ),
                       ),
-                      SizedBox(height: 10,),
+                      SizedBox(
+                        height: 10,
+                      ),
                       Text(
                         '5. Chili & okra: 6 times for every season ',
                         textAlign: TextAlign.justify,
@@ -220,12 +247,12 @@ class _SyngentaDetailsPageState extends State<SyngentaDetailsPage> {
         color: Colors.transparent,
         elevation: 0,
         child: Container(
-          margin: EdgeInsets.all(16),
+          //margin: EdgeInsets.all(16),
           child: ElevatedButton(
             onPressed: _launchURL,
             style: ElevatedButton.styleFrom(
-              fixedSize: Size(200, 55.0), // Adjust the width and height as needed
-              primary: Color.fromRGBO(77, 139, 49, 1),
+              fixedSize: Size(200, 55.0),
+              backgroundColor: Color.fromRGBO(77, 139, 49, 1),
               padding: EdgeInsets.symmetric(vertical: 16),
               textStyle: TextStyle(fontSize: 18),
               shape: RoundedRectangleBorder(
@@ -234,11 +261,11 @@ class _SyngentaDetailsPageState extends State<SyngentaDetailsPage> {
             ),
             child: Row(
               children: [
-                Spacer(flex: 1,),
-                ImageIcon(AssetImage("lib/assets/images/shopping-cart.png")),
-                SizedBox(width: 10,),
-                Text('Buy Now'),
-                Spacer(flex: 1,),
+                Spacer(),
+                Icon(Icons.shopping_cart, color: Colors.white),
+                SizedBox(width: 10),
+                Text('Buy Now', style: TextStyle(color: Colors.white)),
+                Spacer(),
               ],
             ),
           ),

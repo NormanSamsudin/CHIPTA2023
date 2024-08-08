@@ -1,0 +1,1 @@
+ C:\\Users\\Eyeman\\Documents\\GitHub\\CHIPTA2023\\.dart_tool\\flutter_build\\3760050eab0421f180d381d8cc6dee2a\\native_assets.yaml: 

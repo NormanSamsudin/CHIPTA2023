@@ -33,15 +33,17 @@ class _apiTileState extends State<apiTile> {
         spaceBetweenItem: 15,
         children: [
           ////temperature///
-          ExpansionTileBorderItem(
+          ExpansionTileOutlined(
             title: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Row(
                   children: [
-                    if(widget.temperature < 10 || widget.temperature > 35)
-                    Icon(Icons.warning,  color: Colors.amber,),
-
+                    if (widget.temperature < 10 || widget.temperature > 35)
+                      Icon(
+                        Icons.warning,
+                        color: Colors.amber,
+                      ),
                     Text(
                       'Temperature',
                       style: GoogleFonts.lexend(
@@ -84,42 +86,66 @@ class _apiTileState extends State<apiTile> {
               ],
             ),
             children: [
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(40, 0, 0, 0),
-                    child: Row(
+              Padding(
+                padding: const EdgeInsets.fromLTRB(40, 0, 0, 0),
+                child: Row(
+                  children: [
+                    const Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text('Minimum : 10 °C', style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500, fontSize: 16),),
-                            Text('Optimal Day: 30 - 35 °C', style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500, fontSize: 16),),
-                            Text('Maximum : 35 °C', style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500, fontSize: 16),),
-                          ],
+                        Text(
+                          'Minimum : 10 °C',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w500,
+                              fontSize: 16),
                         ),
-                        SizedBox(width: 10,),
-                        Container(
-                          height: 100,
-                          width: 100,
-                          child: Lottie.asset('assets/lottie/temperature.json'),
-                        )
+                        Text(
+                          'Optimal Day: 30 - 35 °C',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w500,
+                              fontSize: 16),
+                        ),
+                        Text(
+                          'Maximum : 35 °C',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w500,
+                              fontSize: 16),
+                        ),
                       ],
                     ),
-                  ),
-                  SizedBox(height: 15,)
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Container(
+                      height: 100,
+                      width: 100,
+                      child: Lottie.asset('assets/lottie/temperature.json'),
+                    )
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 15,
+              )
             ],
-
           ),
 
           ///relative humidity///
-          ExpansionTileBorderItem(
+          ExpansionTileOutlined(
             title: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Row(
                   children: [
-                    if(widget.relHumidity < 30 || widget.relHumidity > 85)
-                      Icon(Icons.warning,  color: Colors.amber,),
+                    if (widget.relHumidity < 30 || widget.relHumidity > 85)
+                      Icon(
+                        Icons.warning,
+                        color: Colors.amber,
+                      ),
                     Text(
                       'Relative Humidity',
                       style: GoogleFonts.lexend(
@@ -162,41 +188,66 @@ class _apiTileState extends State<apiTile> {
               ],
             ),
             children: [
-                Padding(
-                    padding: const EdgeInsets.fromLTRB(40, 0, 0, 0),
-                    child: Row(
+              Padding(
+                padding: const EdgeInsets.fromLTRB(40, 0, 0, 0),
+                child: Row(
+                  children: [
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text('Low    : Below 30 %', style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500, fontSize: 16),),
-                            Text('Optimal: 40 - 60 %', style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500, fontSize: 16),),
-                            Text('High   : Above 85 %', style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500, fontSize: 16),),
-                          ],
+                        Text(
+                          'Low    : Below 30 %',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w500,
+                              fontSize: 16),
                         ),
-                        SizedBox(width: 50,),
-                        Container(
-                          height: 100,
-                          width: 100,
-                          child: Lottie.asset('assets/lottie/humidity.json'),
-                        )
+                        Text(
+                          'Optimal: 40 - 60 %',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w500,
+                              fontSize: 16),
+                        ),
+                        Text(
+                          'High   : Above 85 %',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w500,
+                              fontSize: 16),
+                        ),
                       ],
                     ),
-                  ),
-                  SizedBox(height: 15,)
+                    SizedBox(
+                      width: 50,
+                    ),
+                    Container(
+                      height: 100,
+                      width: 100,
+                      child: Lottie.asset('assets/lottie/humidity.json'),
+                    )
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 15,
+              )
             ],
           ),
 
           ///precipitation///
-          ExpansionTileBorderItem(
+          ExpansionTileOutlined(
             title: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Row(
                   children: [
-                    if( widget.precipitation > 7.6)
-                      Icon(Icons.warning,  color: Colors.amber,),
+                    if (widget.precipitation > 7.6)
+                      Icon(
+                        Icons.warning,
+                        color: Colors.amber,
+                      ),
                     Text(
                       'Precipitation',
                       style: GoogleFonts.lexend(
@@ -240,41 +291,73 @@ class _apiTileState extends State<apiTile> {
             ),
             children: [
               Padding(
-                    padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
-                    child: Row(
+                padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
+                child: Row(
+                  children: [
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text('Dry    : 0 mm', style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500, fontSize: 16),),
-                            Text('Light Rain: Below 2.5 mm', style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500, fontSize: 16),),
-                            Text('Moderate Rain   : 2.5 - 7.6 mm', style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500, fontSize: 16),),
-                            Text('Heavy Rain   : Above 7.6 mm', style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500, fontSize: 16),),
-                          ],
+                        Text(
+                          'Dry    : 0 mm',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w500,
+                              fontSize: 16),
                         ),
-                        SizedBox(width: 5,),
-                        Container(
-                          height: 100,
-                          width: 100,
-                          child: Lottie.asset('assets/lottie/precipitation.json'),
-                        )
+                        Text(
+                          'Light Rain: Below 2.5 mm',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w500,
+                              fontSize: 16),
+                        ),
+                        Text(
+                          'Moderate Rain   : 2.5 - 7.6 mm',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w500,
+                              fontSize: 16),
+                        ),
+                        Text(
+                          'Heavy Rain   : Above 7.6 mm',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w500,
+                              fontSize: 16),
+                        ),
                       ],
                     ),
-                  ),
-                  SizedBox(height: 15,)
+                    SizedBox(
+                      width: 5,
+                    ),
+                    Container(
+                      height: 100,
+                      width: 100,
+                      child: Lottie.asset('assets/lottie/precipitation.json'),
+                    )
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 15,
+              )
             ],
           ),
 
           ///soil temperature///
-          ExpansionTileBorderItem(
+          ExpansionTileOutlined(
             title: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Row(
                   children: [
-                    if(widget.soilTemperature < 10 || widget.soilTemperature > 35)
-                      Icon(Icons.warning,  color: Colors.amber,),
+                    if (widget.soilTemperature < 10 ||
+                        widget.soilTemperature > 35)
+                      Icon(
+                        Icons.warning,
+                        color: Colors.amber,
+                      ),
                     Text(
                       'Soil Temperature',
                       style: GoogleFonts.lexend(
@@ -318,41 +401,65 @@ class _apiTileState extends State<apiTile> {
             ),
             children: [
               Padding(
-                    padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
-                    child: Row(
+                padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
+                child: Row(
+                  children: [
+                    const Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text('Minimum : 10 °C', style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500, fontSize: 16),),
-                            Text('Optimal Day: 10 - 35 °C', style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500, fontSize: 16),),
-                            Text('Maximum : 35 °C', style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500, fontSize: 16),),
-                          ],
+                        Text(
+                          'Minimum : 10 °C',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w500,
+                              fontSize: 16),
                         ),
-                        SizedBox(width: 40,),
-                        Container(
-                          height: 100,
-                          width: 100,
-                          child: Lottie.asset('assets/lottie/soilTemperature.json'),
-                        )
+                        Text(
+                          'Optimal Day: 10 - 35 °C',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w500,
+                              fontSize: 16),
+                        ),
+                        Text(
+                          'Maximum : 35 °C',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w500,
+                              fontSize: 16),
+                        ),
                       ],
                     ),
-                  ),
-                  SizedBox(height: 15,)
+                    SizedBox(
+                      width: 40,
+                    ),
+                    Container(
+                      height: 100,
+                      width: 100,
+                      child: Lottie.asset('assets/lottie/soilTemperature.json'),
+                    )
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 15,
+              )
             ],
           ),
 
           /// soil moisture ///
-          ExpansionTileBorderItem(
+          ExpansionTileOutlined(
             title: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Row(
                   children: [
-                    if(widget.soilMoisture < 0.25 || widget.soilMoisture > 0.7)
-                      Icon(Icons.warning,  color: Colors.amber,),
-                    
+                    if (widget.soilMoisture < 0.25 || widget.soilMoisture > 0.7)
+                      Icon(
+                        Icons.warning,
+                        color: Colors.amber,
+                      ),
                     Text(
                       'Soil Moisture',
                       style: GoogleFonts.lexend(
@@ -395,43 +502,66 @@ class _apiTileState extends State<apiTile> {
               ],
             ),
             children: [
-                           Padding(
-                    padding: const EdgeInsets.fromLTRB(30, 0, 0, 0),
-                    child: Row(
+              Padding(
+                padding: const EdgeInsets.fromLTRB(30, 0, 0, 0),
+                child: Row(
+                  children: [
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text('Low : Below 0.25 m3/m3', style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500, fontSize: 16),),
-                            Text('Optimal : 0.3 - 0.45 m3/m3', style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500, fontSize: 16),),
-                            Text('High : Above 0.7 m3/m3', style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500, fontSize: 16),),
-                            
-                          ],
+                        Text(
+                          'Low : Below 0.25 m3/m3',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w500,
+                              fontSize: 16),
                         ),
-                        SizedBox(width: 10,),
-                        Container(
-                          height: 90,
-                          width: 90,
-                          child: Lottie.asset('assets/lottie/soilMoisture.json'),
-                        )
+                        Text(
+                          'Optimal : 0.3 - 0.45 m3/m3',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w500,
+                              fontSize: 16),
+                        ),
+                        Text(
+                          'High : Above 0.7 m3/m3',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w500,
+                              fontSize: 16),
+                        ),
                       ],
                     ),
-                  ),
-                  SizedBox(height: 15,)
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Container(
+                      height: 90,
+                      width: 90,
+                      child: Lottie.asset('assets/lottie/soilMoisture.json'),
+                    )
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 15,
+              )
             ],
           ),
 
           ///uv index ///
-          ExpansionTileBorderItem(
+          ExpansionTileOutlined(
             title: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Row(
                   children: [
-                    if( widget.uvIndex > 5)
-                      Icon(Icons.warning,  color: Colors.amber,),
-                    
+                    if (widget.uvIndex > 5)
+                      Icon(
+                        Icons.warning,
+                        color: Colors.amber,
+                      ),
                     Text(
                       'UV Index',
                       style: GoogleFonts.lexend(
@@ -474,29 +604,51 @@ class _apiTileState extends State<apiTile> {
               ],
             ),
             children: [
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(40, 0, 0, 0),
-                    child: Row(
+              Padding(
+                padding: const EdgeInsets.fromLTRB(40, 0, 0, 0),
+                child: Row(
+                  children: [
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text('Low           : Below 3', style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500, fontSize: 16),),
-                            Text('Moderate : 3 - 5', style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500, fontSize: 16),),
-                            Text('High          : Above 5', style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500, fontSize: 16),),
-                          ],
+                        Text(
+                          'Low           : Below 3',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w500,
+                              fontSize: 16),
                         ),
-                        SizedBox(width: 50,),
-                        Container(
-                          height: 100,
-                          width: 100,
-                          child: Lottie.asset('assets/lottie/uv.json'),
-                        )
+                        Text(
+                          'Moderate : 3 - 5',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w500,
+                              fontSize: 16),
+                        ),
+                        Text(
+                          'High          : Above 5',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w500,
+                              fontSize: 16),
+                        ),
                       ],
                     ),
-                  ),
-                  SizedBox(height: 15,)
+                    SizedBox(
+                      width: 50,
+                    ),
+                    Container(
+                      height: 100,
+                      width: 100,
+                      child: Lottie.asset('assets/lottie/uv.json'),
+                    )
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 15,
+              )
             ],
           ),
         ]);

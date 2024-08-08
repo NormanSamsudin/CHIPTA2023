@@ -23,7 +23,9 @@ class ParasolDetailsPage extends StatefulWidget {
 
 class _ParasolDetailsPageState extends State<ParasolDetailsPage> {
   void _launchURL() async {
-    const url = 'https://shorturl.at/bov17'; // Replace with your desired URL
+    // const url = 'https://shorturl.at/bov17'; // Replace with your desired URL
+    const url =
+        'https://shopee.com.my/PARASOL-RACUN-KULAT-(COPPER-HYROXIDE)-1KG-i.52507726.28903779643?sp_atk=8132c0dd-18bd-4750-b578-51d7de3f0375&xptdk=8132c0dd-18bd-4750-b578-51d7de3f0375'; // Replace with your desired URL
     if (await canLaunch(url)) {
       await launch(url);
     } else {
@@ -47,7 +49,9 @@ class _ParasolDetailsPageState extends State<ParasolDetailsPage> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                SizedBox(height: 30,),
+                SizedBox(
+                  height: 30,
+                ),
                 Stack(
                   children: [
                     Container(
@@ -60,8 +64,6 @@ class _ParasolDetailsPageState extends State<ParasolDetailsPage> {
                         ),
                       ),
                     ),
-
-
                     Center(
                       child: Image.asset(
                         "lib/assets/images/parasol.jpg",
@@ -77,38 +79,45 @@ class _ParasolDetailsPageState extends State<ParasolDetailsPage> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        '1KG Parasol Copper Hydroxide Racun Kulat/Fungicide/Hawar pucuk/Hawar Altenaria/Kulapuk Downy/Reput Pangkal',
+                        'PARASOL RACUN KULAT (COPPER HYROXIDE) 1KG',
                         style: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
                       SizedBox(height: 15),
-
                       Text(
-                        'RM65.00',
+                        'RM61.90',
                         style: TextStyle(
                           fontSize: 20,
                           color: Colors.deepOrangeAccent,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-
-                      SizedBox(height: 10,),
-
-                      Divider(thickness: 5,),
-                      SizedBox(height: 5,),
-
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Divider(
+                        thickness: 5,
+                      ),
+                      SizedBox(
+                        height: 5,
+                      ),
                       Row(
                         children: [
-                          Text("Type:  ", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),),
+                          Text(
+                            "Type:  ",
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 18),
+                          ),
                           ElevatedButton(
-                            onPressed: (){},
+                            onPressed: () {},
                             style: ElevatedButton.styleFrom(
-                              fixedSize: Size(105, 20.0), // Adjust the width and height as needed
-                              primary: Colors.grey,
+                              fixedSize: Size(120, 20.0),
+                              backgroundColor: Colors.grey,
                               shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(10), // To make it rounded
+                                borderRadius: BorderRadius.circular(
+                                    10), // To make it rounded
                               ),
                             ),
                             child: Text("Fungicides"),
@@ -125,7 +134,9 @@ class _ParasolDetailsPageState extends State<ParasolDetailsPage> {
                         ),
                       ),
                       SizedBox(height: 15),
-                      Divider(thickness: 5,),
+                      Divider(
+                        thickness: 5,
+                      ),
                       Text(
                         'Product Description:',
                         style: TextStyle(
@@ -133,7 +144,9 @@ class _ParasolDetailsPageState extends State<ParasolDetailsPage> {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      SizedBox(height: 10,),
+                      SizedBox(
+                        height: 10,
+                      ),
                       Text(
                         'Direction to use: ',
                         style: TextStyle(
@@ -141,7 +154,9 @@ class _ParasolDetailsPageState extends State<ParasolDetailsPage> {
                           fontSize: 16,
                         ),
                       ),
-                      SizedBox(height: 10,),
+                      SizedBox(
+                        height: 10,
+                      ),
                       Text(
                         '1. Spray for every 5 days when needed.',
                         textAlign: TextAlign.justify,
@@ -150,7 +165,9 @@ class _ParasolDetailsPageState extends State<ParasolDetailsPage> {
                           fontSize: 16,
                         ),
                       ),
-                      SizedBox(height: 10,),
+                      SizedBox(
+                        height: 10,
+                      ),
                       Text(
                         '2. Do not use this product more than 3 times in one season.',
                         textAlign: TextAlign.justify,
@@ -159,7 +176,9 @@ class _ParasolDetailsPageState extends State<ParasolDetailsPage> {
                           fontSize: 16,
                         ),
                       ),
-                      SizedBox(height: 10,),
+                      SizedBox(
+                        height: 10,
+                      ),
                       Text(
                         '3. Refer on the product label for ratio mixture.',
                         textAlign: TextAlign.justify,
@@ -200,12 +219,12 @@ class _ParasolDetailsPageState extends State<ParasolDetailsPage> {
         color: Colors.transparent,
         elevation: 0,
         child: Container(
-          margin: EdgeInsets.all(16),
+          //margin: EdgeInsets.all(16),
           child: ElevatedButton(
             onPressed: _launchURL,
             style: ElevatedButton.styleFrom(
-              fixedSize: Size(200, 55.0), // Adjust the width and height as needed
-              primary: Color.fromRGBO(77, 139, 49, 1),
+              fixedSize: Size(200, 55.0),
+              backgroundColor: Color.fromRGBO(77, 139, 49, 1),
               padding: EdgeInsets.symmetric(vertical: 16),
               textStyle: TextStyle(fontSize: 18),
               shape: RoundedRectangleBorder(
@@ -214,11 +233,11 @@ class _ParasolDetailsPageState extends State<ParasolDetailsPage> {
             ),
             child: Row(
               children: [
-                Spacer(flex: 1,),
-                ImageIcon(AssetImage("lib/assets/images/shopping-cart.png")),
-                SizedBox(width: 10,),
-                Text('Buy Now'),
-                Spacer(flex: 1,),
+                Spacer(),
+                Icon(Icons.shopping_cart, color: Colors.white),
+                SizedBox(width: 10),
+                Text('Buy Now', style: TextStyle(color: Colors.white)),
+                Spacer(),
               ],
             ),
           ),
