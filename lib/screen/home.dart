@@ -27,10 +27,11 @@ class _homeState extends State<home> {
   Widget build(BuildContext context) {
     // TODO: implement build
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
             backgroundColor: Color.fromRGBO(196, 247, 161, 1),
-            title:  Row(
+            title: Row(
               children: [
                 //SizedBox(width: 0,),
                 ImageIcon(
@@ -53,7 +54,6 @@ class _homeState extends State<home> {
           color: Color.fromRGBO(216, 221, 239, 1),
           buttonBackgroundColor: Color.fromRGBO(216, 221, 239, 1),
           backgroundColor: Color.fromARGB(255, 255, 255, 255),
-          
           animationCurve: Curves.easeInOut,
           animationDuration: Duration(milliseconds: 600),
           onTap: (index) {
@@ -61,27 +61,26 @@ class _homeState extends State<home> {
               showPage = pageList[index];
             });
           },
-          
-          items: const  [
-              CurvedNavigationBarItem(
-                child: ImageIcon(
-                  AssetImage("lib/assets/images/scan-plant.png"),
-                  size: 30,
-                ),
-                //child: ImageIcon(AssetImage("lib/assets/images/camera-plant.png"),),
-                label: 'Scanner',
+          items: const [
+            CurvedNavigationBarItem(
+              child: ImageIcon(
+                AssetImage("lib/assets/images/scan-plant.png"),
+                size: 30,
               ),
-              CurvedNavigationBarItem(
-                child: Icon(
-                  Icons.home_outlined,
-                  size: 28,
-                ),
-                label: 'Dashboard',
+              //child: ImageIcon(AssetImage("lib/assets/images/camera-plant.png"),),
+              label: 'Scanner',
+            ),
+            CurvedNavigationBarItem(
+              child: Icon(
+                Icons.home_outlined,
+                size: 28,
               ),
-              CurvedNavigationBarItem(
-                child: Icon(Icons.shopping_bag_outlined),
-                label: 'Shop',
-              ),
+              label: 'Dashboard',
+            ),
+            CurvedNavigationBarItem(
+              child: Icon(Icons.shopping_bag_outlined),
+              label: 'Shop',
+            ),
           ],
         ),
       ),

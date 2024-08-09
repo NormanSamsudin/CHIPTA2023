@@ -23,7 +23,9 @@ class BactoDetailsPage extends StatefulWidget {
 
 class _BactoDetailsPageState extends State<BactoDetailsPage> {
   void _launchURL() async {
-    const url = 'https://shorturl.at/lLTX1'; // Replace with your desired URL
+    // const url = 'https://shorturl.at/lLTX1'; // Replace with your desired URL
+    const url =
+        'https://shopee.com.my/Real-Strong-Bacto-Acti-Plus-Bacillus-subtilis-%E6%9E%AF%E8%8D%89%E6%9D%86%E8%8F%8C-1KG-i.104534676.7057902454?sp_atk=b133e994-8319-4bb4-913b-9bc9800f34e2&xptdk=b133e994-8319-4bb4-913b-9bc9800f34e2'; // Replace with your desired URL
     if (await canLaunch(url)) {
       await launch(url);
     } else {
@@ -111,9 +113,8 @@ class _BactoDetailsPageState extends State<BactoDetailsPage> {
                           ElevatedButton(
                             onPressed: () {},
                             style: ElevatedButton.styleFrom(
-                              fixedSize: Size(105,
-                                  20.0), // Adjust the width and height as needed
-                              primary: Colors.grey,
+                              fixedSize: Size(120, 20.0),
+                              backgroundColor: Colors.grey,
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(
                                     10), // To make it rounded
@@ -215,13 +216,12 @@ class _BactoDetailsPageState extends State<BactoDetailsPage> {
         color: Colors.transparent,
         elevation: 0,
         child: Container(
-          margin: EdgeInsets.all(16),
+          //margin: EdgeInsets.all(16),
           child: ElevatedButton(
             onPressed: _launchURL,
             style: ElevatedButton.styleFrom(
-              fixedSize:
-                  Size(200, 55.0), // Adjust the width and height as needed
-              primary: Color.fromRGBO(77, 139, 49, 1),
+              fixedSize: Size(200, 55.0),
+              backgroundColor: Color.fromRGBO(77, 139, 49, 1),
               padding: EdgeInsets.symmetric(vertical: 16),
               textStyle: TextStyle(fontSize: 18),
               shape: RoundedRectangleBorder(
@@ -230,17 +230,11 @@ class _BactoDetailsPageState extends State<BactoDetailsPage> {
             ),
             child: Row(
               children: [
-                Spacer(
-                  flex: 1,
-                ),
-                ImageIcon(AssetImage("lib/assets/images/shopping-cart.png")),
-                SizedBox(
-                  width: 10,
-                ),
-                Text('Buy Now'),
-                Spacer(
-                  flex: 1,
-                ),
+                Spacer(),
+                Icon(Icons.shopping_cart, color: Colors.white),
+                SizedBox(width: 10),
+                Text('Buy Now', style: TextStyle(color: Colors.white)),
+                Spacer(),
               ],
             ),
           ),

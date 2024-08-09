@@ -23,7 +23,9 @@ class TrichoDetailsPage extends StatefulWidget {
 
 class _TrichoDetailsPageState extends State<TrichoDetailsPage> {
   void _launchURL() async {
-    const url = 'https://shorturl.at/corA0'; // Replace with your desired URL
+    // const url = 'https://shorturl.at/corA0'; // Replace with your desired URL
+    const url =
+        'https://shopee.com.my/Real-Strong-Tricho-Acti-Plus-6-Trichoderma-fungicide-organic-1KG-RealStrong-i.104534676.5148501087?sp_atk=6e7a07aa-95af-4703-af30-65cd41042b02&xptdk=6e7a07aa-95af-4703-af30-65cd41042b02'; // Replace with your desired URL
     if (await canLaunch(url)) {
       await launch(url);
     } else {
@@ -47,7 +49,9 @@ class _TrichoDetailsPageState extends State<TrichoDetailsPage> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                SizedBox(height: 30,),
+                SizedBox(
+                  height: 30,
+                ),
                 Stack(
                   children: [
                     Container(
@@ -60,8 +64,6 @@ class _TrichoDetailsPageState extends State<TrichoDetailsPage> {
                         ),
                       ),
                     ),
-
-
                     Center(
                       child: Image.asset(
                         "lib/assets/images/tricho.jpg",
@@ -84,7 +86,6 @@ class _TrichoDetailsPageState extends State<TrichoDetailsPage> {
                         ),
                       ),
                       SizedBox(height: 15),
-
                       Text(
                         'RM56.00',
                         style: TextStyle(
@@ -93,22 +94,30 @@ class _TrichoDetailsPageState extends State<TrichoDetailsPage> {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-
-                      SizedBox(height: 10,),
-
-                      Divider(thickness: 5,),
-                      SizedBox(height: 5,),
-
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Divider(
+                        thickness: 5,
+                      ),
+                      SizedBox(
+                        height: 5,
+                      ),
                       Row(
                         children: [
-                          Text("Type:  ", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),),
+                          Text(
+                            "Type:  ",
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 18),
+                          ),
                           ElevatedButton(
-                            onPressed: (){},
+                            onPressed: () {},
                             style: ElevatedButton.styleFrom(
-                              fixedSize: Size(105, 20.0), // Adjust the width and height as needed
-                              primary: Colors.grey,
+                              fixedSize: Size(120, 20.0),
+                              backgroundColor: Colors.grey,
                               shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(10), // To make it rounded
+                                borderRadius: BorderRadius.circular(
+                                    10), // To make it rounded
                               ),
                             ),
                             child: Text("Fungicides"),
@@ -117,9 +126,9 @@ class _TrichoDetailsPageState extends State<TrichoDetailsPage> {
                       ),
                       Text(
                         'Based microbial inoculant containing Trichoderma koningii as the '
-                            'active ingredient for controlling fungal diseases in plants. '
-                            'Tricho Acti-Plus is a proven, viable, sustainable and eco-friendly '
-                            'alternative to environmentally damaging chemical-based fungicides.  ',
+                        'active ingredient for controlling fungal diseases in plants. '
+                        'Tricho Acti-Plus is a proven, viable, sustainable and eco-friendly '
+                        'alternative to environmentally damaging chemical-based fungicides.  ',
                         textAlign: TextAlign.justify,
                         style: TextStyle(
                           fontSize: 16,
@@ -128,7 +137,9 @@ class _TrichoDetailsPageState extends State<TrichoDetailsPage> {
                         ),
                       ),
                       SizedBox(height: 15),
-                      Divider(thickness: 5,),
+                      Divider(
+                        thickness: 5,
+                      ),
                       Text(
                         'Product Description:',
                         style: TextStyle(
@@ -136,7 +147,9 @@ class _TrichoDetailsPageState extends State<TrichoDetailsPage> {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      SizedBox(height: 10,),
+                      SizedBox(
+                        height: 10,
+                      ),
                       Text(
                         'Direction to use: ',
                         style: TextStyle(
@@ -144,29 +157,35 @@ class _TrichoDetailsPageState extends State<TrichoDetailsPage> {
                           fontSize: 16,
                         ),
                       ),
-                      SizedBox(height: 10,),
+                      SizedBox(
+                        height: 10,
+                      ),
                       Text(
                         '1. Nursery: 10mg to 1Liter chlorine-free water, leave it '
-                            'for 5 hours to active the Trichoderma koningii, then '
-                            'spray the whole tree. Respray every 2-3weeks. ',
+                        'for 5 hours to active the Trichoderma koningii, then '
+                        'spray the whole tree. Respray every 2-3weeks. ',
                         textAlign: TextAlign.justify,
                         style: TextStyle(
                           fontWeight: FontWeight.w300,
                           fontSize: 16,
                         ),
                       ),
-                      SizedBox(height: 10,),
+                      SizedBox(
+                        height: 10,
+                      ),
                       Text(
                         '2. Field-transplanting: 15gm or 1% to apply in poly bag or '
-                            'mix with compost or organic fertilizers before planting '
-                            'or transplanting.  ',
+                        'mix with compost or organic fertilizers before planting '
+                        'or transplanting.  ',
                         textAlign: TextAlign.justify,
                         style: TextStyle(
                           fontWeight: FontWeight.w300,
                           fontSize: 16,
                         ),
                       ),
-                      SizedBox(height: 10,),
+                      SizedBox(
+                        height: 10,
+                      ),
                       Text(
                         '3. Immature/mature crops: Spray base of plant (45-50cm radius) with Tricho Acti-plus solution.Spraying is to be repeated every wet season. ',
                         textAlign: TextAlign.justify,
@@ -207,12 +226,12 @@ class _TrichoDetailsPageState extends State<TrichoDetailsPage> {
         color: Colors.transparent,
         elevation: 0,
         child: Container(
-          margin: EdgeInsets.all(16),
+          //margin: EdgeInsets.all(16),
           child: ElevatedButton(
             onPressed: _launchURL,
             style: ElevatedButton.styleFrom(
-              fixedSize: Size(200, 55.0), // Adjust the width and height as needed
-              primary: Color.fromRGBO(77, 139, 49, 1),
+              fixedSize: Size(200, 55.0),
+              backgroundColor: Color.fromRGBO(77, 139, 49, 1),
               padding: EdgeInsets.symmetric(vertical: 16),
               textStyle: TextStyle(fontSize: 18),
               shape: RoundedRectangleBorder(
@@ -221,11 +240,11 @@ class _TrichoDetailsPageState extends State<TrichoDetailsPage> {
             ),
             child: Row(
               children: [
-                Spacer(flex: 1,),
-                ImageIcon(AssetImage("lib/assets/images/shopping-cart.png")),
-                SizedBox(width: 10,),
-                Text('Buy Now'),
-                Spacer(flex: 1,),
+                Spacer(),
+                Icon(Icons.shopping_cart, color: Colors.white),
+                SizedBox(width: 10),
+                Text('Buy Now', style: TextStyle(color: Colors.white)),
+                Spacer(),
               ],
             ),
           ),
